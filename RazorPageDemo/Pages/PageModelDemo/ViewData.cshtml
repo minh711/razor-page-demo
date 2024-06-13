@@ -1,7 +1,13 @@
 ﻿@page
 @model RazorPageVer1.Pages.PageModelDemo.ViewDataModel
+@{
+    ViewBag.MyBag = "My Bag";
+}
 
 <p>Hello @ViewData["name"]</p>
 
 <p>@Model.NameAttribute</p>
 <p>@ViewData["NameAttribute"]</p>
+
+<p>@ViewBag.MyBag</p>
+<p>@ViewData["MyBag"]</p>

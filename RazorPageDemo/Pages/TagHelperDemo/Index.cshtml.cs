@@ -28,9 +28,5 @@ namespace RazorPageVer1.Pages.TagHelperDemo
     public class IndexModel : PageModel
     {
         public Member Member { get; set; }
-
-        public void OnGet()
-        {
-        }
     }
 }
