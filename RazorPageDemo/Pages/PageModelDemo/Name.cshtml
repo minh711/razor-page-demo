@@ -1,0 +1,23 @@
+﻿@page
+@model RazorPageVer1.Pages.PageModelDemo.NameModel
+
+@{
+    if (Request.HasFormContentType)
+    {
+        Model.Name = Request.Form["name"];
+    }
+}
+
+<h2>This is Page A</h2>
+
+<form method="post">
+    <div>Name: <input name="name" /></div>
+    <br />
+    <div><input type="submit" /></div>
+    <br />
+</form>
+
+@if (!string.IsNullOrEmpty(Model.Name))
+{
+    <p>Hello @Model.Name!</p>
+}

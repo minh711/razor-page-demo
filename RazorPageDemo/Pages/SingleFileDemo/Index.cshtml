@@ -1,0 +1,30 @@
+﻿@page
+@model RazorPageVer1.Pages.SingleFileDemo.IndexModel
+@functions {
+    [BindProperty]
+    public string Name { get; set; }
+}
+
+@{
+    if (Request.HasFormContentType)
+    {
+        Name = Request.Form["name"];
+    }
+
+    int age = 10;
+}
+
+<h2>This is Page A</h2>
+
+<form method="post">
+    <div>Name: <input name="name" /></div>
+    <br />
+    <div><input type="submit" /></div>
+    <br />
+</form>
+
+@if (!string.IsNullOrEmpty(Name))
+{
+    <p>Hello @Name!</p>
+    <p>Your are @age year(s) old!</p>
+}
